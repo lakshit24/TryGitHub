@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+            overflow: hidden;
+          
+        }
+        body{
+            background-color: #1d1e21;
+        }
+        .container:not(p){
+            position: relative;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        p{
+            color: rgb(138, 138, 138);
+            font-size: 20px;
+            text-align: center;
+        
+        }
+        i{
+                margin-top: 10px;
+                color:#333;
+        }
+        .a{
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+        div,.a{
+            position: relative;
+            width: auto;
+            background: #1d1e21;
+            color: #555;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 46px;
+            cursor: pointer;
+            margin: 0 4px;
+            /* border-radius: 25px; */
+         
+            transition: all 0.5s ease;
+        }
+        input[type="checkbox"]{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 50%;
+            width: 50%;
+            z-index: 100;
+        }
+        input[type="checkbox"]:checked ~
+            div{
+                box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+                color: yellow;
+                text-shadow: 0 0 15px yellow,0 0 25px yellow;
+                animation: glow 5s linear infinite;
+        }
+        @keyframes glow{
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+        
+        }
+        @media (max-width:400px) {
+            div{
+                font-size: 35px;
+            }
+            .a{
+                font-size: 30px;
+            }
+            p{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+    <p>By :  Lakshit</p>
+<div class="container">
+    <input type="checkbox" name="" id="">
+    <div class="a">D I S C O</div>
+    <i>Click Above</i>
+   
+</div>
+</body>
+</html>
+
